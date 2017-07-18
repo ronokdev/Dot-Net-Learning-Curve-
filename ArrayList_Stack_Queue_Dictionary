@@ -1,0 +1,136 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace Bitm
+{
+    public class Program
+    {
+        public void Main(string[] args)
+        {
+            //int testMethodResult =  testMethod(10,10);  // assessing new method from main method----
+            //Console.Write(testMethodResult);
+            //Console.Read();
+
+
+            //arrayList();
+
+            //stack_queue();
+
+            //queue_program();
+
+            dictionary_program();
+
+        }
+
+        public int testMethod(int pera1,int pera2)
+        {
+            int result = pera1 + pera2;
+            return result;   
+        }
+
+        // array list -------- start ---------------
+        public void arrayList()
+        {
+            ArrayList myfirstarrayList = new ArrayList();
+
+            myfirstarrayList.Add("My");
+            myfirstarrayList.Add("age is");
+            myfirstarrayList.Add("20");
+
+            foreach (var item in myfirstarrayList)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadLine();
+
+        }
+
+        // array list -------- END ---------------
+
+        // stack  --------- start ---------------
+        public void stack_queue()
+        {
+            Stack<int> my_first_stack = new Stack<int>();
+
+            my_first_stack.Push(100);
+            my_first_stack.Push(101);
+            my_first_stack.Push(102);
+            my_first_stack.Push(103);
+
+            foreach (int item in my_first_stack)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("Number of Element is the stack is :: "+my_first_stack.Count);
+
+            Console.WriteLine("We will pop element > "+my_first_stack.Pop());
+            Console.WriteLine("--------------------");
+            foreach (int item in my_first_stack)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadLine();
+
+
+
+        }
+
+
+        // stack  --------- END ---------------
+
+        // queue ---- start ---------------
+        public void queue_program()
+        {
+            Queue<int> my_first_queue =new Queue<int>();
+
+            my_first_queue.Enqueue(50);
+            my_first_queue.Enqueue(60);
+            my_first_queue.Enqueue(70);
+            my_first_queue.Enqueue(80);
+
+            foreach (int item in my_first_queue)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("Number of Element is the Queue is :: " + my_first_queue.Count);
+            Console.WriteLine("Dequeue ELement > "+my_first_queue.Dequeue());
+            Console.WriteLine("--------------------");
+
+            foreach (int item in my_first_queue)
+            {
+                Console.WriteLine(item);
+            }
+
+
+            Console.ReadLine();
+
+        }
+
+        // queue ---- start ---------------
+
+        // dictionary ------- start -------------
+        public void dictionary_program()
+        {
+            Dictionary<int, string> my_first_dictionary = new Dictionary<int, string>();
+
+            my_first_dictionary.Add(10,"My Name");
+            my_first_dictionary.Add(11, "is");
+            my_first_dictionary.Add(12, "Ronok");
+
+            foreach (KeyValuePair<int,string> item in my_first_dictionary)
+            {
+                Console.WriteLine(item.Key+"----"+item.Value);
+            }
+            Console.ReadLine();
+
+        } 
+
+        // dictionary ------- END -------------
+    }
+}
