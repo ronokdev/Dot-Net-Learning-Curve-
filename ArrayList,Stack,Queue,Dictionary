@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 
+// collection type :: arrayList , stack_queue , dictionary
+
 namespace Bitm
 {
     public class Program
