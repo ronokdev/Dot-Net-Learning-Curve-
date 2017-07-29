@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Bitm
+{
+    public class bitm_two
+    {
+        public string test = "This is a testing String"; // data / field / property / instance veriable
+       
+        public String test_return() { // method
+            int a;  // variable
+              
+            return test;
+        }
+        
+    }
+}
