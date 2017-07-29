@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-// collection type :: arrayList , stack_queue , dictionary
+// collection type :: arrayList , stack_queue , dictionary , hastable
 
 namespace Bitm
 {
@@ -14,18 +14,36 @@ namespace Bitm
     {
         public void Main(string[] args)
         {
+
             //int testMethodResult =  testMethod(10,10);  // assessing new method from main method----
             //Console.Write(testMethodResult);
             //Console.Read();
 
-
+       
             //arrayList();
 
             //stack_queue();
 
             //queue_program();
 
-            dictionary_program();
+            //dictionary_program();
+
+            // hash_table_function();
+
+            bitm_two b_two = new bitm_two(); // bitm_two er ekta object create korlam b_two
+            String ans = b_two.test_return();
+            Console.WriteLine(ans);
+
+            bitm_two reference_1 = b_two; // creating the reference of bitm_two.reference types represent the address of the variable rather than the data itself
+            reference_1.test = "Manipulation the text"; // changing the value of "test" with the reference.
+            Console.WriteLine(reference_1.test_return());
+
+
+
+
+
+
+            Console.ReadLine(); 
 
         }
 
@@ -117,6 +135,7 @@ namespace Bitm
         // queue ---- start ---------------
 
         // dictionary ------- start -------------
+        // key dhore value rakhbe , key ta ki type hobe seita define korte hobe......
         public void dictionary_program()
         {
             Dictionary<int, string> my_first_dictionary = new Dictionary<int, string>();
@@ -131,8 +150,31 @@ namespace Bitm
             }
             Console.ReadLine();
 
-        } 
+        }
 
         // dictionary ------- END -------------
+
+        // hastable --------------- start ----------------------
+
+        // sort kora jay nah ; value checking khub easy
+
+        public void hash_table_function() {
+
+            Hashtable my_first_hash_table = new Hashtable();
+            my_first_hash_table.Add(1,50);
+            my_first_hash_table.Add(2,"ronok");
+            my_first_hash_table.Add(3,550);
+            my_first_hash_table.Add(4,1650);
+
+            Console.Write(my_first_hash_table.ContainsValue("ronok"));
+           
+
+            foreach (DictionaryEntry test in my_first_hash_table)
+            {
+                Console.WriteLine(test.Key+" : "+test.Value);
+            }
+            Console.ReadLine();
+        }
+    // hastable --------------- END ----------------------
     }
 }
